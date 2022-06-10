@@ -35,12 +35,12 @@ async function run() {
 
         })
         // // Get single product details
-        // app.get('/projects/:id', async (req, res) => {
-        //     const id = req.params.id
-        //     const query = { _id: ObjectId(id) }
-        //     const productItem = await projectCollection.findOne(query)
-        //     res.send(productItem)
-        // })
+        app.get('/projects/:id', async (req, res) => {
+            const id = req.params.id
+            const query = { _id: ObjectId(id) }
+            const projectItem = await projectCollection.findOne(query)
+            res.send(projectItem)
+        })
 
 
 
